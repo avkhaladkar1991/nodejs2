@@ -17,6 +17,9 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: 3000
+           - containerPort: 3000
+          env:
+           - name: MONGO_URI
+             value: {{ .Values.env.MONGO_URI | quote }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+           {{- toYaml .Values.resources | nindent 6 }}

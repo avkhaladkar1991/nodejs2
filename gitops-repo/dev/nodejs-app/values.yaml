@@ -22,3 +22,12 @@ ingress:
   className: nginx
   host: nodejs.local
   path: /
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 70
+
+env:
+  MONGO_URI: "mongodb://mongodb:27017/mydatabase"
