@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME   = "avkhaladkar1991/nodejs-devops-app"
         IMAGE_TAG    = "${BUILD_NUMBER}"
         DOCKER_IMAGE = "${IMAGE_NAME}:${IMAGE_TAG}"
-        GIT_REPO     = "https://github.com/avkhaladkar1991/nodejs.git"
+        GIT_REPO     = "https://github.com/avkhaladkar1991/nodejs2.git"
     }
 
     options {
